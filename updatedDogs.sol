@@ -2,7 +2,7 @@ pragma solidity ^0.8.11;
 
 import "./storage.sol";
 
-contract Dogs is Storage  {
+contract updateDogs is Storage  {
     
     //modifier onlyOwner(){
     //    require(msg.sender == owner);
@@ -20,6 +20,6 @@ contract Dogs is Storage  {
      //probably will work better as set uint mapping
      //onlyOwner should call this function
     function setNumberOfDogs(uint256 number) public onlyOwner {
-          _uintStorage["Dogs"] = number;
+          _uintStorage["Dogs"] = number + 1;
     }
 }
